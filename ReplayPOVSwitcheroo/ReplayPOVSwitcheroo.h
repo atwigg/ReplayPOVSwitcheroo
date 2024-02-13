@@ -17,5 +17,6 @@ class ReplayPOVSwitcheroo: public BakkesMod::Plugin::BakkesModPlugin
 public:
 
 	int playerGoals = 0;
+	int matchGoals = 0;
 
 };
