@@ -1,8 +1,6 @@
 #include "pch.h"
 #include "ReplayPOVSwitcheroo.h"
 #include "bakkesmod/wrappers/includes.h"
-#include <iostream>
-using namespace std;
 
 
 
@@ -69,6 +67,7 @@ void ReplayPOVSwitcheroo::onLoad()
 		[this](std::string eventName) {
 			playerGoals = 0;
 			matchGoals = 0;
+			cvarManager->executeCommand("cl_goalreplay_pov 1");
 		});
 
 	//Reset goals to 0
@@ -76,5 +75,6 @@ void ReplayPOVSwitcheroo::onLoad()
 		[this](std::string eventName) {
 			playerGoals = 0;
 			matchGoals = 0;
+			cvarManager->executeCommand("cl_goalreplay_pov 1");
 		});
 }
